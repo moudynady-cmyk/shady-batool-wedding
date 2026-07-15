@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Gatlik Saphir";
+  src: url("./assets/fonts/gatlik-saphir.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #841e1e;
+  --secondary: #983434;
+  --gold: #f4c7a2;
+  --cream: #efe4da;
+  --beige: #d0bead;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: #1d1718;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--primary);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* The app itself is the only vertical scroller. Locking the document removes
+   the browser/preview rubber-band area that used to appear below the footer. */
+#root {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+/* Near the final pixels, switch the scroller canvas to the footer colour and
+   hide the floral fixed layer. Even an aggressive mobile pull cannot expose a
+   second section after the footer. */
+html.footer-end-active #root,
+body.footer-end-active #root {
+  background-color: #1d1718;
+}
+
+html.footer-end-active .site-background,
+body.footer-end-active .site-background {
+  opacity: 0;
+  visibility: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: "Gatlik Saphir", serif;
+}
+
+/* The root is the scroll container, so it must be locked during the cover and
+   intro video instead of relying on body overflow alone. */
+html.intro-scroll-lock #root,
+body.intro-scroll-lock #root {
+  overflow: hidden;
+  overscroll-behavior: none;
+}

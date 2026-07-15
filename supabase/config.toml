@@ -1,0 +1,2 @@
+[functions.export-rsvp-csv]
+verify_jwt = false
