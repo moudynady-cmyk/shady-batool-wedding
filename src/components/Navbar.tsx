@@ -1,10 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/navbar.css";
+
+const MENU_ITEMS = [
+  { href: "#story", label: "Our Love Story" },
+  { href: "#timeline", label: "Our Journey" },
+  { href: "#details", label: "Our Day Details" },
+  { href: "#rsvp", label: "RSVP" },
+  { href: "#contact", label: "Need Any Help?" },
+  { href: "#gallery", label: "Our Memories" },
+] as const;
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [menuOpen]);
 
   return (
     <nav className="navbar" aria-label="Main navigation">
@@ -28,12 +48,14 @@ export default function Navbar() {
       <div
         id="wedding-mobile-menu"
         className={`mobile-menu ${menuOpen ? "active" : ""}`}
+        aria-hidden={!menuOpen}
       >
-        <a href="#story" onClick={closeMenu}>Story</a>
-        <a href="#timeline" onClick={closeMenu}>Timeline</a>
-        <a href="#gallery" onClick={closeMenu}>Gallery</a>
-        <a href="#details" onClick={closeMenu}>Wedding</a>
-        <a href="#rsvp" onClick={closeMenu}>RSVP</a>
+        {MENU_ITEMS.map((item, index) => (
+          <a key={item.href} href={item.href} onClick={closeMenu}>
+            <small aria-hidden="true">{String(index + 1).padStart(2, "0")}</small>
+            <span>{item.label}</span>
+          </a>
+        ))}
       </div>
     </nav>
   );

@@ -39,7 +39,7 @@ export default function Contact() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="contact" aria-labelledby="contact-title">
+    <section id="contact" className="contact" aria-labelledby="contact-title">
       <div className="contact__ambient" aria-hidden="true">
         <span className="contact__glow contact__glow--one" />
         <span className="contact__glow contact__glow--two" />
