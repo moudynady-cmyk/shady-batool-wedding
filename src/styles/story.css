@@ -220,9 +220,9 @@
   display: block;
   margin: 0.14em 0 0.06em;
   color: var(--story-wine);
-  font-family: "Gatlik Saphir", "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.04em;
-  font-style: normal;
+  font-style: italic;
   font-weight: 400;
   letter-spacing: -0.02em;
   transform: rotate(-2deg);
@@ -405,7 +405,8 @@
 }
 
 .story-photo__caption strong {
-  font-family: "Gatlik Saphir", "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
   font-size: clamp(1.65rem, 2.5vw, 2.35rem);
   font-weight: 400;
   line-height: 1;
@@ -621,7 +622,8 @@
   display: block;
   margin-top: 5px;
   color: var(--story-wine);
-  font-family: "Gatlik Saphir", "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
   font-size: clamp(1.7rem, 2.7vw, 2.35rem);
   font-weight: 400;
   line-height: 1;

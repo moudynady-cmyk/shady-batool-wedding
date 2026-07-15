@@ -177,14 +177,15 @@
   align-items: center;
   margin: 0;
   color: #600b10;
-  font-family: "Gatlik Saphir", "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 400;
   text-shadow: 0 3px 15px rgba(91, 15, 15, 0.07);
 }
 
 .hero-title__name {
   display: block;
-  font-size: clamp(4.55rem, 21.6vw, 8.8rem);
+  font-family: "Gatlik Saphir", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.1rem, 19.2vw, 8rem);
   line-height: 0.86;
   letter-spacing: -0.035em;
   white-space: nowrap;
@@ -296,8 +297,9 @@
 
 .hero-quote em {
   color: #806344;
-  font-family: "Gatlik Saphir", "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.25em;
+  font-style: italic;
   font-weight: 400;
   animation: hero-script-glow 5.6s ease-in-out 2.4s infinite;
 }
@@ -630,7 +632,7 @@
   }
 
   .hero-title__name {
-    font-size: clamp(4rem, 19.4vw, 5.55rem);
+    font-size: clamp(3.55rem, 17.2vw, 5rem);
     line-height: 0.82;
   }
 
@@ -731,7 +733,7 @@
   }
 
   .hero-title__name {
-    font-size: clamp(4.05rem, 20vw, 4.75rem);
+    font-size: clamp(3.45rem, 17vw, 4.25rem);
     line-height: 0.82;
   }
 
@@ -781,7 +783,7 @@
   }
 
   .hero-title__name {
-    font-size: clamp(7.2rem, 10.2vw, 9.5rem);
+    font-size: clamp(6.5rem, 9.2vw, 8.7rem);
   }
 
   .hero-title__ampersand {
