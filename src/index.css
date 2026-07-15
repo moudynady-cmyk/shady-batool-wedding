@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
-
-@font-face {
-  font-family: "Gatlik Saphir";
-  src: url("./assets/fonts/gatlik-saphir.ttf") format("truetype");
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.cdnfonts.com/css/bailenson");
 
 :root {
   --primary: #841e1e;
