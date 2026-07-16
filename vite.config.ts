@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/shady-batool-wedding/',
+  base: '/',
 });
